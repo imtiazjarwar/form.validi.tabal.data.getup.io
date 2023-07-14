@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Data Program</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script type="text/javascript">
+    function btn(){
+        var a=document.getElementById("erp").value;
+        var b=document.getElementById("name").value;
+        var c=document.getElementById("adress").value;
+        var d=document.getElementById("phone").value;
+        console.log(a,b,c,d);
+       var table=document.getElementsByTagName('table')[0];
+        var newRow=table.insertRow(1);
+
+        var cel1 = newRow.insertCell(0);
+        var cel2 = newRow.insertCell(1);
+        var cel3 = newRow.insertCell(2);
+        var cel4 = newRow.insertCell(3);
+
+        cel1.innerHTML=a;
+        cel2.innerHTML=b;
+        cel3.innerHTML=c;
+        cel4.innerHTML=d;
+
+
+    }
+    
+
+</script>
+<body>
+    <div  class="input">
+        <input type="text" name="erp" placeholder="Enter Your ERP NO" id="erp" class="data">
+        <input type="text" name="fname" placeholder="Enter Your Name" id="name" class="data">
+        <input type="text" name="adress" placeholder="Enter Your Adrees" id="adress" class="data">
+        <input type="text" name="phone" placeholder="Enter Your Phone" id="phone" class="data">
+        <br>
+        <button onclick="btn()">Add Data</button>
+
+    </div>
+
+    <div class="contener">
+        <div class="table">
+            
+    <table border="1">
+    <tr>
+        <th>ERP</th>
+        <th>Name</th>
+        <th> Address</th>
+        <th>Phone</th>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+    </tr>
+    </div>
+    </div>
+        
+            
+        
+    </table>
+    
+    
+</body>
+</html>
